@@ -171,6 +171,7 @@ def create_project_structure(project_name, overwrite=False, install_deps=True):
     files = {  # Example files
         "README.md": "# Project Title\n\nProject description goes here.",
         "config/config.yaml": "gemini:\n  api_url: 'https://api.gemini.com/v2/campaigns'\n  access_token: 'YOUR_ACCESS_TOKEN'",
+        "requirements.txt": "pyyaml\nrequests\n"  # Add necessary dependencies
     }
     create_files(root_dir, files, overwrite)
 
@@ -191,6 +192,7 @@ def create_project_structure(project_name, overwrite=False, install_deps=True):
         files_to_keep = [  # Default files (update this list)
             "README.md",
             "config/config.yaml",
+            "requirements.txt",
             "notebooks/data_analysis.ipynb",
             "scripts/fetch_data.py",
             "scripts/process_data.py",
